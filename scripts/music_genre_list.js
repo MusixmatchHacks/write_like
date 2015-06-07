@@ -80,7 +80,7 @@ var genres = {
                 "music_genre_parent_id":32,
                 "music_genre_name_extended": "Blues / Acoustic Blues",
                 "music_genre_vanity": "Blues-Acoustic-Blues",
-                "music_genre_id": 5,
+                "music_genre_id": 6,
                 "music_genre_name": "George R. R. Martin",
                 "url": "http://ec2-54-147-191-254.compute-1.amazonaws.com/autocomplete_like_grrm/v1.0/current_word?q=",
                 "img": "images/grrm.jpg"
