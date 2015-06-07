@@ -1,6 +1,6 @@
 $(document).ready(function() {$('#genre').multiselect(
 	{ 
-		maxHeight: 150,  enableCaseInsensitiveFiltering: true, buttonClass: 'btn btn-link', disableIfEmpty: true, filterPlaceholder: 'select an artist',
+		maxHeight: 150,  enableCaseInsensitiveFiltering: true, buttonClass: 'btn btn-link', disableIfEmpty: true, filterPlaceholder: 'select 1/more artists',
 		buttonText: function(options, select) 
 					{
 		                if (options.length === 0) {
