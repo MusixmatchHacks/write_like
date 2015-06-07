@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+<head>
+	<title>Polyglottis</title>
+</head>
+/*.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}*/
+
+</style>
+<script src = "scripts/savePlaylist.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="scripts/bluebird.js"></script>
+<link rel="stylesheet" href="bootstrap-multiselect/css/bootstrap-3.2.0.min.css" type="text/css"/>
+<script type="text/javascript" src="bootstrap-multiselect/js/bootstrap-3.2.0.min.js"></script>
+<script type="text/javascript" src="bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="bootstrap-multiselect/css/bootstrap-multiselect.css" type="text/css"/>
+<link rel="stylesheet" href="style.css">
+<script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script>
+<!-- <link rel="stylesheet" href="/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" /> -->
+<!-- <script src="/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> -->
+
+<!-- <script src="/scripts/nlform.js"></script> -->
+
+<body >
+<!-- <header>
+	<div class="container" >
+		<img src="http://musixmatch.com/img/mxm_logo_white.png" style = "padding-left: 0%;" width="135" alt="Musixmatch" id="Musixmatch"/>
+		<p style = "display:inline; padding-left: 13.7%;font-size:19px;" >Polyglottis: Create playlists for learning foreign languages<! Polyglot: playlists to help learn foreign languages </p>
+		<a href="http://research.musixmatch.com/post/99306796630/polyglottis-playlists-for-learning-foreign-languages" style = "display:inline; padding-right: 18.6%;
+padding-top: 5px; font-size:16px;">About</a>
+	</div>
+</header> -->
+		<!-- <form id="nl-form" class="nl-form">
+		My Duolingo username is 
+		<input type="search" id="username" placeholder="username" />
+		<br />
+		and I like to listen to 
+		<select multiple="multiple" id="genre" placeholder="Select genre"  /></select>
+		<select id="genre" placeholder="Select genre"  /></select>
+		 -->
+		<!-- <button id = "makePlaylist" >Make my playlist</button> -->
+		<!-- </div>
+		<div class="nl-overlay"></div>
+		</form>
+ 		 -->
+ 		 <header class="container">
+ 		 	<!-- <div class="left"><a href="http://musixmatch.com"><img src="images/logo.png" width="165" alt="Musixmatch and Duolingo" /></a></div> -->
+ 		 	<div class="">
+	 		 	<h1>Write like Kanye</h1>
+	 		 	<h2>How does the autocomplete on Kanye's cellphone look like ?</h2>
+	 		 </div>
+ 		 </header>
+		<div class = "mainForm">
+		    <p >
+		      <span class="copy">Autocomplete like </span>
+		      <!-- <span class="inputcontainer"><input class="textinput" name="name" id="username" value="" placeholder="username"></span>  -->
+		      <!-- <span class="inputcontainer"><input class="textinput" name="name" id="username" value="" style="height: 45px;text-align: center;width: 230px;"> -->
+		      <!-- </span> -->
+		      <!-- <span class="copy">.</span> -->
+		      <!-- <br />		 -->
+		     <!-- <span class="copy" style="margin-top: 10px;display: inline-block;"> And I like </span> -->
+		      <!-- <select  id="genre" class="dropdown" ></select> -->
+		      <!-- <br /> -->
+		      <select id = "genre" class="form-control" name="genre"  multiple placeholder="Select artist">   
+		      	<!-- <option value="" disabled selected>Select an artist</option>  -->
+		      </select>
+		      <span class="copy">.</span>
+
+		      <br />
+		      <br />
+		      <input id = "user_message" class="form-control btn-link" type = 'text' placeholder = "Start typing here"> </input>
+		 	</p>
+		 </div>
+		 
+		<!-- <button class="button" id = "makePlaylist" >Make my playlist</button> -->
+ 		
+ 		<!-- <div id = 'genreHolder' style = "display:none"><p id = 'genreText'> Select genre/s:</p></div> -->
+
+		
+		<!-- <div id = "buttonContainer">
+ 		<input type="button" value="Make playlist" id = "makePlaylist" style = "display:none"></div> -->
+ 		
+
+		<!-- <div id = "progress" style = "display:none" ><img src = 'ajax-loader.gif'> </div> -->
+		<!-- <div style="text-align: center;"> <div id = "SpotifyWidget" > </div> <button type="button" value="Save This Playlist To Spotify" id="SpotifySave" style="display: none;">SAVE THIS PLAYLIST TO SPOTIFY</button></div> -->
+		<div id = 'autocomplete_display' ></div>
+		
+		<!-- <div id = "metadata" style = "display:none"></div> -->
+ 		<!-- <div> <button type="button" value="Save This Playlist To Spotify" id = "SpotifySave" style = "display:none"> </div></div> -->
+ 		<!-- <footer style="text-align: center;"><div id = "status" style = "display:none"></div></footer> -->
+ 		<div id="tweetBtn">
+		 	<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.54460a335ba528591a034cfb509bdf51.en.html#_=1433662157866&amp;count=horizontal&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Flab.musixmatch.com%2Fnarcissism%2F&amp;size=m&amp;text=REPLACEME&amp;url=http%3A%2F%2Ftest.com" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="position: static; visibility: visible; width: 96px; height: 19px;"></iframe>
+		</div>
+</body>
+
+<script src="scripts/stopwords.js"></script>
+<script src="scripts/Snowball.min.js"></script>
+<script src="scripts/music_genre_list.js"></script>
+<script src="scripts/main.js"> </script>
+<script src="scripts/home.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53134539-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
